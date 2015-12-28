@@ -35,7 +35,7 @@ def ssh(queue_get,cmd):
 		hostip=queue_get[0]
                 username=queue_get[1]
                 password=queue_get[2]
-                port=queue_get[3]
+                port=int(queue_get[3])
         	s=paramiko.SSHClient()
        	 	s.load_system_host_keys()
         	s.set_missing_host_key_policy(paramiko.AutoAddPolicy())
